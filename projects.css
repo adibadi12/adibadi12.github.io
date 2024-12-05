@@ -10,7 +10,6 @@ html, body{
       align-items: center;
       padding-top: 10px;
       text-shadow: 5px 5px 5px 5px;
-      
     }
   
   .background-wrapper{
@@ -59,3 +58,4 @@ html, body{
   .navi :hover{
     color:lime;
   }
+
