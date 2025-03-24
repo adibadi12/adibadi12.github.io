@@ -1,0 +1,96 @@
+/* Reseter margin og padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Bakgrunn for body */
+body {
+    background-image: url('wood-411643_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tittel-styling */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 10px 20px;
+    background-color: burlywood;
+    color: brown;
+    border-radius: 5px;
+    border: 3px solid black;
+    margin-bottom: 20px;
+}
+
+/* Instruksjonsstyling */
+p {
+    color: aliceblue;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Santa's Treats kontainer */
+.santasTreats {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Melkeglass */
+#milk {
+    height: 300px;
+    width: 200px;
+    background: url('svg\'s/milk glass.svg') no-repeat center;
+    background-size: contain;
+    border-radius: 5px;
+    position: absolute;
+    left: 60%; /* Plassere melkeglasset */
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Cookie */
+#wholeCookie {
+    height: 150px;
+    width: 150px;
+    background: url('svg\'s/cookie.svg') no-repeat center;
+    background-size: contain;
+    cursor: grab;
+    position: absolute; /* Absolutt posisjon for fri bevegelse */
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+}
+
+#wholeCookie:active {
+    transform: scale(0.9); /* Effekt når cookien trykkes på */
+}
+
+/* Melding-styling */
+#message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: aliceblue;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px black;
+}
