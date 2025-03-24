@@ -1,0 +1,279 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #152238;
+}
+
+.Hoved-header{
+    text-align: center;
+    padding: 45px;
+    font-family: 'Plarfair Display' ;
+    background-color:greenyellow;
+    box-shadow: 0 0 20px 10px rgba(173, 255, 47, 0.8);
+}
+
+.Hoved-header h1{
+    margin: 0;
+    font-size: 3.0rem;
+    text-shadow: 2px 2px 10px white;
+}
+.Hoved-header h2{
+    margin: 0;
+    text-shadow: 2px 2px 10px white;
+}
+
+.Main-navbar {
+    background-color: #152238;
+    margin: 0px;
+}
+
+.Main-navbar ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px;
+    display: flex;
+  }
+
+  .Main-navbar ul li{
+    margin: 20px;
+    border: 2px solid yellowgreen;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #355280;
+  }
+
+  .Main-navbar a{
+    font-family: 'Playfair Display';
+    text-decoration: none;
+    color: aliceblue;
+  }
+
+  .Main-navbar ul li:hover{
+    color: yellowgreen;
+    transform: scale(1.2);
+}
+
+.Main-navbar a:hover{
+    color: yellowgreen;
+}
+
+.second-header{
+    background-image:url(Picturer/NuclearPP.jpg) ; /* Pixabay */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 0 0 10px 10px;
+     padding: 0;
+     height: 70%;
+}
+
+#Hvordan {
+    position: relative;
+    top: 100px; 
+    text-align: center;
+    width: 50%;
+    height: 185%;
+    margin: auto;
+    padding-top: 50px;
+    background-color: #ffffff;
+    border-radius: 8px 8px 0px 0px  ;
+    padding: 50px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-family: 'Playfair Display', serif;
+}
+
+#Hvordan p{
+    font-size: larger;
+}
+
+#Hvordan img {
+    max-width: 80%;
+    padding-top:40px;
+}
+
+#Fordeler {
+    position: relative;
+    top: 100px; 
+    text-align: center;
+    width: 50%;
+    height: 185%;
+    margin-top: 50px;
+    margin: auto;
+    padding-top: 50px;
+    background-color: #ffffff;
+    padding: 50px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-family: 'Playfair Display', serif;
+}
+
+#Fordeler h2 {
+    padding: 40px;
+    border-top:  solid#152238;
+}
+
+#Fordeler  p {
+    font-size: larger;
+}
+
+#Fordeler img{
+    max-width: 80%;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+#Avfall{
+    position: relative;
+    top: 10px; 
+    text-align: center;
+    width: 50%;
+    height: 185%;
+    margin: auto;
+    padding-top: 50px;
+    background-color: #ffffff;
+    padding: 50px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-family: 'Playfair Display', serif;
+}
+
+#Avfall h2 {
+    border-top: solid #152238;
+    padding: 40px;
+}
+
+#Avfall p{
+    font-size: larger;
+}
+
+#Avfall img{
+    max-width: 80%;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+#Miljøkonsekvenser{
+    position: relative;
+    top: 10px; 
+    text-align: center;
+    width: 50%;
+    height: 185%;
+    margin: auto;
+    padding-top: 50px;
+    background-color: #ffffff;
+    padding: 50px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-family: 'Playfair Display', serif;
+}
+
+#Miljøkonsekvenser h2{
+    border-top: solid#152238;
+    padding: 40px;
+}
+
+#Miljøkonsekvenser p {
+    font-size: larger;
+}
+
+#Miljøkonsekvenser img{
+    max-width: 80%;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+#Fremtiden{
+    position: relative;
+    top: 10px; 
+    text-align: center;
+    width: 50%;
+    height: 185%;
+    margin: auto;
+    padding-top: 50px;
+    background-color: #ffffff;
+    padding: 50px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-family: 'Playfair Display', serif;
+}
+
+#Fremtiden h2{
+    border-top: solid #152238;
+    padding: 40px;
+}
+
+#Fremtiden img{
+    max-width: 80%;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+#Fremtiden p{
+    font-size: larger;
+}
+
+#Konklusjon {
+    position: relative;
+    top: 10px; 
+    text-align: center;
+    width: 50%;
+    height: 130%;
+    margin: auto;
+    padding-top: 50px;
+    background-color: #ffffff;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-family: 'Playfair Display', serif;
+    border-radius: 0px 0px 8px 8px;
+    margin-bottom: 40px;
+}
+
+#Konklusjon p {
+    font-size: larger;
+}
+
+#Konklusjon h2{
+    border-top: solid#152238;
+    padding: 40px;
+}
+
+#Konklusjon img{
+    max-width: 80%;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+footer{
+    text-align: center;
+    background-color: yellowgreen;
+    box-shadow: 0 0 20px 10px rgba(173, 255, 47, 0.8);
+    font-family: 'Plarfair Display' ;
+    padding: 45px;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: larger;
+    text-align: center;
+    font-family: 'Playfair Display';
+    color: yellow;
+    border: solid #152238;
+    background-color: #355280;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+footer a:hover{
+    transform: scale(1.2);
+    color: yellowgreen;
+}
