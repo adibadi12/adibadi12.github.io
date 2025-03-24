@@ -1,0 +1,13 @@
+#utskrift {
+    color:aliceblue;
+    font-family:'Playfair Display' serif;
+}
+
+.all {
+    text-align: center;
+    border: 4px solid black;
+    padding: 20px;
+    margin: 280px;
+    background-color: aqua;
+    border-radius: 9px;
+}

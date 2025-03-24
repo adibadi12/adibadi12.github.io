@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display:flex;
+}
+
+#utskrift {
+    font-size: xx-large;
+    font-style: oblique;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.bjørny{
+justify-content: center;
+align-items: center;
+}
+

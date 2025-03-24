@@ -1,0 +1,159 @@
+html, body{
+  height: 100%;
+  background-color: #f6f7f9;
+  margin:0;
+}
+
+header {
+    display: flex;                      
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    text-shadow: 5px 5px 5px 5px;
+    
+  }
+
+.background-wrapper{
+    background-image:url(G80-M3.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 0 0 10px 10px;
+     padding: 0;
+     height: 70%;
+     box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5);
+  }
+
+
+h1{
+  margin-left: 275px;
+  color:aliceblue;
+  font-style: italic;
+  text-shadow: 5px 5px 5px black ;
+  font-size: 2.5rem;
+}
+
+
+.navi ul{
+  list-style: none;
+  margin-right: 175px;
+  padding: 15px;
+  display: flex;
+}
+
+.navi ul li{
+  margin: 20px;
+}
+
+main {
+  padding: 30px;
+  display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    'main main main main main main main'
+    'main main main main main main main'
+    'main main main main main main main'
+    'main main main main main main main';
+    font-family: serif
+}
+
+.intro {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  color: #101114;
+  border: 3px;
+  background-color: #ebebeb;
+  padding: 30px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: x-large;
+}
+
+.about-me{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border: 3px;
+  border-radius: 10px;
+  color: #101114;
+  background-color: #ebebeb;
+  font-size: x-large;
+  text-align: justify;
+  padding: 20px;
+  margin:10px;
+}
+
+.my-skills{
+  grid-column-start:5;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end:3;
+  border: 3px ;
+  border-radius: 10px;
+  color: #101114;
+  background-color: #ebebeb;
+  font-size: x-large;
+  text-align: justify;
+  padding: 20px;
+  margin: 10px;
+}
+
+.navi a{
+  text-decoration: none;
+  color:aliceblue;
+  text-shadow: 3px 3px 3px black;
+}
+
+.navi :hover{
+  color:blue;
+}
+
+.Upper-main{
+  color: aliceblue;
+}
+  
+.teddy {
+  grid-column-start: 5;
+  grid-column-end: 4;
+  background-color: #ebebeb;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.feet{
+  color: #101114;
+  border: 3px ;
+  background-color: #cbcdd1;
+  padding: 30px;
+  text-align: center;
+  border-radius: 6px;
+  margin-top: 200px;
+}
+
+.feet a{
+  list-style: none;
+}
+
+@media screen and (max-width: 800px) {
+ 
+  .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+          'header'
+          'meny'
+          'main'
+          'footer';
+        }
+      }
+
+  
+
+
+
+  
+  

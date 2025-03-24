@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+    padding: 10px;
+    height: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+#ston, #paper, #scissors:hover {
+    color: aqua;
+}
+
+#stone, #paper, #scissors {
+    height:300px;
+    width: 200px;
+    align-items: center;
+}
+.RPS {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 20px;
+    padding: 30px;
+    border: 3px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+#stone{
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#paper{
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#scissors {
+    background-color: blue;
+    padding:20px;
+    border-radius: 10px;
+}
+
+#scissors:hover{
+    background-color: blueviolet;
+    transform: scale(1.1);
+}
+
+#stone:hover{
+    background-color: blueviolet;
+    transform: scale(1.1);
+}
+
+#paper:hover{
+    background-color: blueviolet;
+    transform: scale(1.1);
+}

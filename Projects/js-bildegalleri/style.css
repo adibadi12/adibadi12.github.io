@@ -1,0 +1,52 @@
+/* Reset margins and height for full control */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Full-page background and layout */
+body {
+    display: flex;
+    flex-direction: column; 
+    background: linear-gradient(aliceblue, white, lightblue, green, green);
+    align-items: center;
+}
+
+h1 { 
+    margin: 30px;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    padding:30px;
+    border: 2px solid green;
+    border-radius: 8px;
+    width: 350px;
+    background-color: #F4FFF0;
+}
+
+h1 span{
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+
+}
+
+h1:hover{
+    scale: 1.12;
+}
+
+main.bildene {
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+#bilde {
+    width: auto;
+    height: 80%; 
+    max-width: 100%; 
+    border-radius: 10px;
+    border: 3px solid aliceblue;
+    box-shadow: 0px 0px 5px 0.5px gray;
+}

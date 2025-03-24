@@ -1,0 +1,12 @@
+
+
+p{
+    border: 190px solid black;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Playfair Display' serif ;
+    padding: 15px;
+    justify-content: center;
+    align-items:center;
+    text-shadow: 2px 2px 2px;
+}

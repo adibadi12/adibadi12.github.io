@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.17 238.81">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d5d7d8;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #fff32e;
+      }
+
+      .cls-3 {
+        fill: #4a4b4c;
+      }
+
+      .cls-4 {
+        fill: #dcddde;
+      }
+
+      .cls-5 {
+        fill: #fff45f;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M49.68,160.12c-9.81-4.72-3.6-30.99-1.01-69.7C52.84,28.28,43.16,1.48,47.66.53c9.4-2,60.15,112.84,23.23,150.51-5.23,5.34-15.08,12.04-21.21,9.09Z"/>
+    <path class="cls-4" d="M114.33,32.85c-1.92-17.34-.04-26.19-1.01-26.26-3.67-.28-32.51,126.84,3.03,145.45,10.97,5.75,28.58,1.42,34.34-8.08,11.42-18.81-29.4-48.33-36.36-111.11Z"/>
+    <ellipse class="cls-2" cx="141.1" cy="190.2" rx="35.58" ry="47.98"/>
+    <ellipse class="cls-5" cx="39.11" cy="193.23" rx="38.61" ry="45.08"/>
+    <rect class="cls-3" x="70.01" y="142.22" width="40.29" height="47.98"/>
+  </g>
+</svg>
