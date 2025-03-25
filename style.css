@@ -1,6 +1,6 @@
 html, body{
   height: 100%;
-  background-color: #f6f7f9;
+  background-color: black;
   margin:0;
 }
 
@@ -14,7 +14,7 @@ header {
   }
 
 .background-wrapper{
-    background-image:url(G80-M3.jpg) ;
+    background-image:url(Blackcurrent.jpg) ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,60 +45,15 @@ h1{
   margin: 20px;
 }
 
-main {
-  padding: 30px;
-  display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-    'main main main main main main main'
-    'main main main main main main main'
-    'main main main main main main main'
-    'main main main main main main main';
-    font-family: serif
-}
-
 .intro {
-  grid-column-start: 2;
-  grid-column-end: 7;
-  color: #101114;
-  border: 3px;
-  background-color: #ebebeb;
+  font-family: 'VT323', monospace;
+  color: #00ff00;
   padding: 30px;
-  text-align: center;
+  text-align: left;
   border-radius: 6px;
-  font-size: x-large;
+  font-size:large;
 }
 
-.about-me{
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  border: 3px;
-  border-radius: 10px;
-  color: #101114;
-  background-color: #ebebeb;
-  font-size: x-large;
-  text-align: justify;
-  padding: 20px;
-  margin:10px;
-}
-
-.my-skills{
-  grid-column-start:5;
-  grid-column-end: 7;
-  grid-row-start: 2;
-  grid-row-end:3;
-  border: 3px ;
-  border-radius: 10px;
-  color: #101114;
-  background-color: #ebebeb;
-  font-size: x-large;
-  text-align: justify;
-  padding: 20px;
-  margin: 10px;
-}
 
 .navi a{
   text-decoration: none;
@@ -114,24 +69,6 @@ main {
   color: aliceblue;
 }
   
-.teddy {
-  grid-column-start: 5;
-  grid-column-end: 4;
-  background-color: #ebebeb;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-}
-
-.feet{
-  color: #101114;
-  border: 3px ;
-  background-color: #cbcdd1;
-  padding: 30px;
-  text-align: center;
-  border-radius: 6px;
-  margin-top: 200px;
-}
 
 .feet a{
   list-style: none;
