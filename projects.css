@@ -80,7 +80,7 @@ html, body{
   #TheProjects{
     padding: 20px;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     font-family: 'VT323', monospace;
     background-color: azure;
   }
