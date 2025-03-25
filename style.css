@@ -52,6 +52,7 @@ h1{
   text-align: left;
   border-radius: 6px;
   font-size:large;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
 }
 
 
@@ -62,7 +63,8 @@ h1{
 }
 
 .navi :hover{
-  color:blue;
+  color:#00ff00;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
 }
 
 .Upper-main{
