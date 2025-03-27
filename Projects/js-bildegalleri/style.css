@@ -22,13 +22,13 @@ h1 {
     border-radius: 8px;
     width: 350px;
     background-color: #F4FFF0;
-    text-decoration: none;
 }
 
 h1 span{
     font-size: 1.5rem;
     display: block;
     text-align: center;
+    text-decoration: none;
 
 }
 
