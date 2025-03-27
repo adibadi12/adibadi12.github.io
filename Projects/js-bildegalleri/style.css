@@ -24,12 +24,14 @@ h1 {
     background-color: #F4FFF0;
 }
 
+#HOME{
+    text-decoration: none;
+}
+
 h1 span{
     font-size: 1.5rem;
     display: block;
     text-align: center;
-    text-decoration: none;
-
 }
 
 h1:hover{
