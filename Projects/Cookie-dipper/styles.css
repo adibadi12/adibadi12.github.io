@@ -23,11 +23,21 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
     padding: 10px 20px;
-    background-color: burlywood;
-    color: brown;
+    background-color: blanchedalmond;
+    color: black;
     border-radius: 5px;
     border: 3px solid black;
     margin-bottom: 20px;
+}
+
+#HOME {
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+    border:3px solid black;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: aliceblue;
 }
 
 /* Instruksjonsstyling */

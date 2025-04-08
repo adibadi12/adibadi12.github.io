@@ -3,9 +3,10 @@ html, body{
     background-color: black;
     margin:0;
   }
+
   
   header {
-      display: flex;                      
+      display: flex;
       justify-content: space-between;
       align-items: center;
       padding-top: 10px;
@@ -37,21 +38,6 @@ html, body{
     display: block;
   }
 
-  #Adi{
-    text-decoration: none;
-  }
-
-  #Adi span{
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
-  }
-
-  #Adi:Hover{
-    transform: scale(1.2);
-    color: lime;
-  }
-
-  
   .navi ul{
     list-style: none;
     margin-right: 175px;
@@ -89,32 +75,49 @@ html, body{
     scale:1.2;
   }
 
-  #TheProjects{
-    padding: 20px;
-    display:flex;
-    flex-direction: row;
-    font-family: 'VT323', monospace;
-    background-color: black;
-    text-align: left;
-  }
-
-
-  #TheProjects ul li{
-    border: 4px;
-    border-radius: 15px;
-    padding: 100px;
-    margin: 50px;
-    background-color: #000f0f;
-    opacity: 0.8;
-  }
-
-  #TheProjects ul li a{
-    font-size: 2.0rem;
+  #Adi{
     text-decoration: none;
+  }
+
+  #Adi span{
     color: #00ff00;
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
   }
 
-  #TheProjects ul li:hover{
-    transform: scale(1.1);
+  #Adi:Hover{
+    transform: scale(1.2);
+    color: lime;
   }
+
+
+#Me{
+    display: flexbox;
+    color: aliceblue;
+    width: 100%;
+}
+
+
+.introduction {
+    display: flex;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    padding: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 35%;
+    margin: 90px;
+    height: 250px;
+    border-radius: 14px;
+    background:linear-gradient(#000000,#ffffff) ;
+}
+
+.AdiIsBuff {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 40%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: 90px;
+    border-radius:20px;
+    max-height: 900px;
+}

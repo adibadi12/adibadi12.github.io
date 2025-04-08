@@ -42,7 +42,14 @@ h1{
 }
 
 .navi ul li{
-  margin: 20px;
+  background: linear-gradient(45deg, #fff000, #00ff00);
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: 0 0 5px rgba(33, 63, 31, 0.717), 
+              0 0 10px rgba(0, 255, 8, 0.7);
+  transition: 0.3s;
+  margin: 15px;
+
 }
 
 .intro {
@@ -58,13 +65,15 @@ h1{
 
 .navi a{
   text-decoration: none;
-  color:aliceblue;
-  text-shadow: 3px 3px 3px black;
 }
 
 .navi :hover{
   color:#00ff00;
   text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+.navi ul li:hover{
+  scale:1.2;
 }
 
 .Upper-main{
