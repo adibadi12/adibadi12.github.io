@@ -50,6 +50,10 @@ h1 span {
   color: lime;
 }
 
+#products {
+  width: 100%;
+}
+
 /* NAVIGATION */
 .navi ul {
   list-style: none;
