@@ -1,149 +1,179 @@
 html, body {
-    height: 100%;
-    background-color: black;
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-  }
-  
-  h1 {
-    color: aliceblue;
-    font-style: italic;
-    font-size: 2.5rem;
-  }
-  
-  h1 span {
-    font-size: 1.5rem;
-    display: block;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-  }
-  
-  .navi ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navi ul li {
-    background: linear-gradient(45deg, #fff000, #00ff00);
-    border-radius: 5px;
-    padding: 10px 20px;
-    box-shadow: 0 0 5px rgba(33, 63, 31, 0.7), 0 0 10px rgba(0, 255, 8, 0.7);
-    transition: transform 0.3s;
-  }
-  
-  .navi a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .navi a:hover {
-    color: lime;
-    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
-  }
-  
-  .navi ul li:hover {
-    transform: scale(1.1);
-  }
-  
-  .background-wrapper {
-    background-image: url('Blackcurrent.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-  }
-  
-  .background-wrapper h2 {
-    font-size: 3rem;
-    text-shadow: 0 0 15px #00ff00;
-  }
-  
-  .intro {
-    display: flex;
-    gap: 50px;
-    margin: 60px 90px;
-    color: aliceblue;
-  }
-  
-  .introduction {
-    flex: 1;
-    border: 2px solid aliceblue;
-    border-radius: 14px;
-    background: linear-gradient(#000000, #1f1f1f);
-    padding: 30px;
-  }
-  
-  .AdiIsBuff img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #00ff00;
-  }
-  
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    padding: 40px;
-  }
-  
-  .product-card {
-    background: linear-gradient(#111, #222);
-    border: 2px solid #00ff00;
-    border-radius: 12px;
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-    transition: transform 0.3s;
-  }
-  
-  .product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
-  }
-  
-  .product-card h3 {
-    color: #00ff00;
-    margin-bottom: 10px;
-  }
-  
-  .product-card button {
-    background: #00ff00;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .product-card button:hover {
-    background: lime;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    color: #00ff00;
-    border-top: 1px solid #00ff00;
-    margin-top: 50px;
-  }
-  
+  height: 100%;
+  background-color: black;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  text-shadow: 5px 5px 5px 5px;
+}
+
+.background-wrapper {
+  background-image: url(Bilder/Leaves.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0 0 10px 10px;
+  padding: 0;
+  height: 70%;
+  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* LOGO / NAME */
+h1 {
+  margin-left: 275px;
+  color: aliceblue;
+  font-style: italic;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h1 span {
+  font-size: 2.0rem;
+  display: block;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+#Adi {
+  text-decoration: none;
+}
+
+#Adi:hover {
+  transform: scale(1.2);
+  color: lime;
+}
+
+/* NAVIGATION */
+.navi ul {
+  list-style: none;
+  margin-right: 175px;
+  padding: 15px;
+  display: flex;
+}
+
+.navi ul li {
+  background: linear-gradient(45deg, #fff000, #00ff00);
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: 0 0 5px rgba(33, 63, 31, 0.717),
+              0 0 10px rgba(0, 255, 8, 0.7);
+  transition: 0.3s;
+  margin: 15px;
+}
+
+.navi a {
+  text-decoration: none;
+  color: black;
+  opacity: 1.0;
+}
+
+.navi a:hover {
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+.navi ul li:hover {
+  scale: 1.2;
+  color: lime;
+}
+
+/* OLD ABOUT SECTION (optional to keep/remove) */
+#Me {
+  display: flexbox;
+  color: aliceblue;
+  width: 100%;
+}
+
+.introduction {
+  display: flex;
+  color: aliceblue;
+  border: 2px solid aliceblue;
+  padding: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 35%;
+  margin: 90px;
+  height: 250px;
+  border-radius: 14px;
+  background: linear-gradient(#000000, #ffffff);
+}
+
+.AdiIsBuff {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 40%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 90px;
+  border-radius: 20px;
+  max-height: 900px;
+}
+
+/* --- NEW WEBSHOP SECTION --- */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 30px;
+  background-color: black;
+  margin:auto;
+}
+
+.product-card {
+  background: linear-gradient(to bottom, #fff, #000000,#000000);
+  color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 16px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.4);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card h2 {
+  margin: 15px 0 10px;
+  font-size: 1.5rem;
+  color: #00ff00;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.product-card button {
+  background: linear-gradient(45deg, #fff000, #00ff00);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  color: lime;
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
