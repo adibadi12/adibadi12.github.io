@@ -5,11 +5,12 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-const db = new sqlite3.Database('./database.db'); // SQLite database
+const db = new sqlite3.Database('./database.db');
 
+// Middleware
 app.use(bodyParser.json());
 
-// Ensure the 'users' table exists when the server starts
+// 📌 Create the users table if it doesn’t exist
 db.serialize(() => {
   db.run(`
     CREATE TABLE IF NOT EXISTS users (
@@ -20,39 +21,38 @@ db.serialize(() => {
   `);
 });
 
-// Example route for testing
+// 🌐 Root route
 app.get('/', (req, res) => {
   res.send('Hello, world!');
 });
 
-// Route for user registration
+// 📝 Register a new user
 app.post('/register', (req, res) => {
   const { username, password } = req.body;
-
-  // Log the data to make sure it’s coming through
   console.log("Received registration data:", { username, password });
 
   if (!username || !password) {
     return res.status(400).json({ error: 'Username and password are required' });
   }
 
-  // Hash the password before storing it
   const hashedPassword = bcrypt.hashSync(password, 10);
 
-  db.run('INSERT INTO users (username, password) VALUES (?, ?)', [username, hashedPassword], function (err) {
-    if (err) {
-      console.error("Database error:", err.message);  // Log the exact DB error
-      return res.status(500).json({ error: `Failed to register user: ${err.message}` });
+  db.run(
+    'INSERT INTO users (username, password) VALUES (?, ?)',
+    [username, hashedPassword],
+    function (err) {
+      if (err) {
+        console.error("Database error:", err.message);
+        return res.status(500).json({ error: 'Failed to register user: ' + err.message });
+      }
+
+      console.log("User successfully registered:", { id: this.lastID, username });
+      res.status(201).json({ message: 'User registered successfully', id: this.lastID, username });
     }
-
-    // Log the successful user creation
-    console.log("User successfully registered:", { id: this.lastID, username });
-
-    res.status(201).json({ message: 'User registered successfully', id: this.lastID, username });
-  });
+  );
 });
 
-// Route for user login
+// 🔐 User login
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
@@ -65,24 +65,27 @@ app.post('/login', (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    // Compare the entered password with the hashed password in the database
     if (!bcrypt.compareSync(password, row.password)) {
       return res.status(401).json({ error: 'Incorrect password' });
     }
 
-    // Generate a JWT token for the user
-    const token = jwt.sign({ id: row.id, username: row.username }, 'your_jwt_secret', { expiresIn: '1h' });
+    const token = jwt.sign(
+      { id: row.id, username: row.username },
+      'your_jwt_secret',
+      { expiresIn: '1h' }
+    );
 
     res.json({ message: 'Login successful', token });
   });
 });
 
-// Example route for testing the JWT (protected route)
-app.get('/protected', (req, res) => {
-  const token = req.headers['authorization'];
+// 🧠 Protected profile route
+app.get('/profile', (req, res) => {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader?.split(' ')[1];
 
   if (!token) {
-    return res.status(403).json({ error: 'Token is required' });
+    return res.status(403).json({ error: 'No token provided' });
   }
 
   jwt.verify(token, 'your_jwt_secret', (err, decoded) => {
@@ -90,11 +93,14 @@ app.get('/protected', (req, res) => {
       return res.status(403).json({ error: 'Invalid or expired token' });
     }
 
-    res.json({ message: 'Protected content accessed', user: decoded });
+    res.json({
+      message: 'Welcome to your profile!',
+      user: decoded
+    });
   });
 });
 
-// Start the server
+// 🚀 Start server
 app.listen(3000, () => {
   console.log('Server running on port 3000');
 });
