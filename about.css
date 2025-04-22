@@ -121,3 +121,94 @@ html, body{
     border-radius:20px;
     max-height: 900px;
 }
+
+/* ---------- Responsive About Section ---------- */
+@media screen and (max-width: 800px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .navi ul {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .navi ul li {
+    margin: 8px;
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  .background-wrapper {
+    height: auto;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .introduction {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 40px auto;
+    height: auto;
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .AdiIsBuff {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    max-height: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h1 span {
+    font-size: 1.2rem;
+  }
+
+  .navi ul {
+    padding: 5px;
+  }
+
+  .navi ul li {
+    padding: 6px 12px;
+    margin: 6px;
+    font-size: 0.9rem;
+  }
+
+  .navi a {
+    font-size: 0.9rem;
+  }
+
+  .introduction {
+    padding: 15px;
+    margin: 20px auto;
+    font-size: 0.9rem;
+  }
+
+  .AdiIsBuff {
+    margin: 15px auto;
+    padding: 5px;
+  }
+}
