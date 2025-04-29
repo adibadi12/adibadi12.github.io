@@ -1,14 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
-const bcrypt = require('bcrypt'); // Added bcrypt for password hashing
+const bcrypt = require('bcrypt'); // For password hashing
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// SQLite3 Database Setup
+// SQLite Database Setup
 const db = new sqlite3.Database('./database.db', (err) => {
   if (err) {
     console.error('Error opening database:', err.message);
@@ -32,14 +32,16 @@ const db = new sqlite3.Database('./database.db', (err) => {
   }
 });
 
-// Login Route
+// Login Endpoint
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
+  // Validate input
   if (!username || !password) {
     return res.status(400).json({ error: 'Username and password are required' });
   }
 
+  // Check if the user exists in the database
   db.get('SELECT * FROM users WHERE username = ?', [username], async (err, row) => {
     if (err) {
       console.error('Database error:', err.message);
@@ -60,7 +62,7 @@ app.post('/login', (req, res) => {
   });
 });
 
-// Registration Route
+// Registration Endpoint
 app.post('/register', async (req, res) => {
   const { username, password } = req.body;
 
@@ -94,3 +96,4 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
