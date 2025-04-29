@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login</title>
   <style>
@@ -42,13 +42,11 @@
     }
     .login-box .message {
       margin-top: 1rem;
+      color: green;
       font-size: 0.9rem;
     }
-    .error {
+    .login-box .error {
       color: red;
-    }
-    .success {
-      color: green;
     }
   </style>
 </head>
@@ -67,7 +65,6 @@
       const password = document.getElementById("password").value;
       const feedback = document.getElementById("feedback");
       feedback.textContent = '';
-      feedback.className = 'message';
 
       try {
         const res = await fetch("http://localhost:3000/login", {
@@ -81,14 +78,11 @@
         const data = await res.json();
 
         if (res.ok) {
-          localStorage.setItem("token", data.token); // save token if needed
-          feedback.textContent = "Login successful! Redirecting...";
-          feedback.classList.add("success");
-          setTimeout(() => {
-            window.location.href = "/dashboard.html"; // update if needed
-          }, 1000);
+          feedback.textContent = "Login successful! Token: " + data.token;
+          feedback.classList.remove("error");
+          feedback.classList.add("message");
         } else {
-          feedback.textContent = data.error || "Login failed.";
+          feedback.textContent = data.error || "Login failed";
           feedback.classList.add("error");
         }
       } catch (error) {
