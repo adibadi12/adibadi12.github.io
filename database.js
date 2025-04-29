@@ -17,7 +17,13 @@ db.serialize(() => {
       username TEXT NOT NULL UNIQUE,
       password TEXT NOT NULL
     );
-  `);
+  `, (err) => {
+    if (err) {
+      console.error('Error creating users table:', err);
+    } else {
+      console.log('Users table initialized.');
+    }
+  });
 });
 
 // Export the `db` object to be used in other files (e.g., server.js)

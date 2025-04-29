@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
+const bcrypt = require('bcrypt'); // Added bcrypt for password hashing
 const app = express();
 
 // Middleware
@@ -39,18 +40,50 @@ app.post('/login', (req, res) => {
     return res.status(400).json({ error: 'Username and password are required' });
   }
 
-  db.get('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], (err, row) => {
+  db.get('SELECT * FROM users WHERE username = ?', [username], async (err, row) => {
     if (err) {
       console.error('Database error:', err.message);
       return res.status(500).json({ error: 'Internal server error' });
     }
 
     if (row) {
-      res.json({ token: 'yourAccessToken' }); // Replace with actual token logic if needed
+      // Compare the hashed password
+      const isPasswordValid = await bcrypt.compare(password, row.password);
+      if (isPasswordValid) {
+        res.json({ token: 'yourAccessToken' }); // Replace with actual token logic if needed
+      } else {
+        res.status(401).json({ error: 'Invalid credentials' });
+      }
     } else {
       res.status(401).json({ error: 'Invalid credentials' });
     }
   });
+});
+
+// Registration Route
+app.post('/register', async (req, res) => {
+  const { username, password } = req.body;
+
+  if (!username || !password) {
+    return res.status(400).json({ error: 'Username and password are required' });
+  }
+
+  try {
+    const hashedPassword = await bcrypt.hash(password, 10); // Hash the password
+    db.run('INSERT INTO users (username, password) VALUES (?, ?)', [username, hashedPassword], (err) => {
+      if (err) {
+        if (err.message.includes('UNIQUE constraint failed')) {
+          return res.status(400).json({ error: 'Username already exists' });
+        }
+        console.error('Database error:', err.message);
+        return res.status(500).json({ error: 'Internal server error' });
+      }
+      res.status(201).json({ message: 'User registered successfully' });
+    });
+  } catch (error) {
+    console.error('Error hashing password:', error.message);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 });
 
 // Serve Static Files (e.g., HTML, CSS, JS)
