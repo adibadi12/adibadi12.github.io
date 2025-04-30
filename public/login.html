@@ -17,8 +17,12 @@
     <button type="submit">Login</button>
   </form>
 
+  <div id="responseMessage"></div>
+
   <script>
     const form = document.getElementById('loginForm');
+    const responseMessage = document.getElementById('responseMessage');
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
 
@@ -36,13 +40,24 @@
 
         const data = await response.json();
         if (response.ok) {
-          alert('Login successful!');
+          responseMessage.style.color = 'green';
+          responseMessage.textContent = 'Login successful! Redirecting to dashboard...';
+
+          // Save token in localStorage
+          localStorage.setItem('token', data.token);
+
+          // Redirect to dashboard
+          setTimeout(() => {
+            window.location.href = 'dashboard.html';
+          }, 2000);
         } else {
-          alert(`Error: ${data.error}`);
+          responseMessage.style.color = 'red';
+          responseMessage.textContent = `Error: ${data.error}`;
         }
       } catch (error) {
         console.error('Error:', error);
-        alert('Failed to login. Please try again later.');
+        responseMessage.style.color = 'red';
+        responseMessage.textContent = 'Failed to login. Please try again later.';
       }
     });
   </script>

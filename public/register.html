@@ -17,8 +17,12 @@
     <button type="submit">Register</button>
   </form>
 
+  <div id="responseMessage"></div>
+
   <script>
     const form = document.getElementById('registerForm');
+    const responseMessage = document.getElementById('responseMessage');
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
 
@@ -36,13 +40,21 @@
 
         const data = await response.json();
         if (response.ok) {
-          alert(data.message);
+          responseMessage.style.color = 'green';
+          responseMessage.textContent = 'Registration successful! Redirecting to login...';
+
+          // Redirect to login page
+          setTimeout(() => {
+            window.location.href = 'login.html';
+          }, 2000);
         } else {
-          alert(`Error: ${data.error}`);
+          responseMessage.style.color = 'red';
+          responseMessage.textContent = `Error: ${data.error}`;
         }
       } catch (error) {
         console.error('Error:', error);
-        alert('Failed to register. Please try again later.');
+        responseMessage.style.color = 'red';
+        responseMessage.textContent = 'Failed to register. Please try again later.';
       }
     });
   </script>
