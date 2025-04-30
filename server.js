@@ -62,6 +62,7 @@ app.post('/login', (req, res) => {
   });
 });
 
+
 // Registration Endpoint
 app.post('/register', async (req, res) => {
   const { username, password } = req.body;

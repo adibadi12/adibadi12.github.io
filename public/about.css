@@ -14,7 +14,7 @@ html, body{
     }
   
   .background-wrapper{
-      background-image:url(Blackcurrent.jpg) ;
+      background-image:url(/Pictures/Blackcurrent.jpg) ;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
