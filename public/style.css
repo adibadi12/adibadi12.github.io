@@ -13,7 +13,7 @@ header {
 }
 
 .background-wrapper {
-  background-image: url(/Pictures/Blackcurrent.jpg);
+  background-image: url(Pictures/Blackcurrent.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@ h1 {
 
 #login/register a{
   text-decoration: none;
-  color: black;
+  color: #00ff00;
 }
 
 #login/register ul{
