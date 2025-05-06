@@ -33,26 +33,72 @@ h1 {
 
 
 
-#login/register a{
-  text-decoration: none;
-  color: #00ff00;
+/* Add a container for the dropdown */
+#login-register-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
 }
 
-#login/register ul{
-  list-style: none;
-  padding: 15px;
+/* Style the dropdown button (e.g., the person icon) */
+#login-register-dropdown button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #000;
   display: flex;
-  margin-right: 300px;
-}
-
-#login/register ul li{
+  align-items: center;
+  gap: 8px;
   background: linear-gradient(45deg, #fff000, #00ff00);
-  border-radius: 5px;
-  padding: 10px 20px;
+  border-radius: 8px;
+  font-style: italic;
+  font-weight: 200;
+  padding: 5px;
   box-shadow: 0 0 5px rgba(33, 63, 31, 0.717),
               0 0 10px rgba(0, 255, 8, 0.7);
   transition: 0.3s;
-  margin: 15px;
+}
+
+#login-register-dropdown button:hover {
+  color: lime;
+  scale:1.2;
+}
+
+/* Dropdown menu container */
+#login-register-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Links inside the dropdown */
+#login-register-dropdown .dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+#login-register-dropdown .dropdown-content a:hover {
+  background-color: #444;
+  color: lime;
+}
+
+/* Show the dropdown content when hovering over the dropdown container */
+#login-register-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: Style for the "person" icon */
+#login-register-dropdown .person-icon {
+  font-size: 1.5rem;
 }
 
 .navi a {
