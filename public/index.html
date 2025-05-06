@@ -40,8 +40,13 @@
         <p class="Credit">My teacher Jo Bjørnar created the terminal below, many thanks to him!</p>
         <div id="terminal">
             <textarea id="tekstboks" readonly></textarea> <!-- Dette fylles ut av JavaScript. -->
-            <input type="text" id="inputfelt" placeholder="Type a command..." autofocus>
+            <input type="text" id="inputfelt" placeholder="Type a command...">
         </div>  
     </main>
+    <script>
+        window.onload = () => {
+            window.scrollTo(0, 0);
+        };
+    </script>
 </body>
 </html>

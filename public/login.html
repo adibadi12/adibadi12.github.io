@@ -7,46 +7,18 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="background-wrapper">
-        <header>
-            <h1>Adrian Mathiassen</h1>
-            <div id="login-register-dropdown">
-                <button>
-                    <span class="person-icon">👤</span> <!-- Person Icon -->
-                    Menu
-                </button>
-                <div class="dropdown-content">
-                    <a href="login.html">Login</a>
-                    <a href="register.html">Register</a>
-                    <a href="dashboard.html">Profile</a>
-                </div>
-            </div>
-            <div class="navi">
-                <nav>
-                    <ul>
-                        <li><a href="store.html">Shop</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="#contact"> Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </div>
-    <main>
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br><br>
-            <button type="submit">Login</button>
-        </form>
-        <div id="responseMessage"></div>
-    </main>
+  <a class="home" href="index.html">🏠</a>
+    <h1>Login</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
+    <div id="responseMessage"></div>
     <script>
         const form = document.getElementById('loginForm');
         const responseMessage = document.getElementById('responseMessage');
