@@ -1,54 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="dashboard.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Welcome to Your Dashboard</h1>
-    <div id="login/register">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="profile.html">Profile</a></li>
-      </ul>
+    <h1>Dashboard</h1>
+    <div class="card">
+        <h2>Welcome Back!</h2>
+        <p>Manage your projects and settings from here.</p>
+        <a href="index.html" class="button">Go to Portfolio/Home</a>
+        <button class="button logout-btn" onclick="logout()">Log Out</button>
     </div>
-  </header>
 
-  <!-- Background Wrapper (Image) -->
-  <div class="background-wrapper">
-    <!-- Main Content -->
-    <div class="main-content">
-      <div class="card">
-        <div class="card-header">
-          <h2>Dashboard Overview</h2>
-        </div>
-        <div class="card-body">
-          <p class="intro">Welcome to your custom dashboard. You can manage your projects and settings here.</p>
-          <a href="index.html" class="button">Go to Portfolio/Home</a>
-        </div>
-        <div class="card-footer">
-          <button class="button logout-btn" onclick="logout()">Log out</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    <script>
+        // Check if token exists
+        const token = localStorage.getItem('token');
+        if (!token) {
+            alert("You must be logged in to view this page.");
+            window.location.href = "login.html";
+        }
 
-  <script>
-    // Check if token exists
-    const token = localStorage.getItem('token');
-    if (!token) {
-      alert("You must be logged in to view this page.");
-      window.location.href = "login.html";
-    }
-
-    function logout() {
-      localStorage.removeItem('token');
-      window.location.href = "login.html";
-    }
-  </script>
+        function logout() {
+            localStorage.removeItem('token');
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 </html>
